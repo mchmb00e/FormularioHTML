@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pre-censo JUVENIL</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+            body {
+                margin: 0;
+                background-color: black;
+            }
+            header {
+                background-color: black;
+                border-bottom: 2px solid white;
+            }
+            header h1 {
+                font-family: 'Oswald', fantasy;
+                font-size: 76px;
+                margin: 0;
+                text-align: center;
+                color: white;
+            }
+            nav ul li a p {
+                font-family: verdana;
+                text-align: center;
+                font-weight: bold;
+            }
+            nav ul {
+                width: 50%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            nav ul li {
+                list-style: none;
+                width: 200px;
+                position: relative;
+                right: 50px;
+                opacity: 70%;
+            }
+            nav ul li:hover {
+                opacity: 100%;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+            }
+            nav {
+                background: darkblue;
+                margin: 0;
+                border-bottom: 2px solid white;
+            }
+            form {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 75%;
+                margin: 0 auto;
+                background: linear-gradient(to bottom right, purple, rgb(90, 11, 90));
+                margin-top: 25px;
+                border-radius: 20px;
+                border: 2px solid white;
+            }
+            fieldset {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 10px;
+                background: linear-gradient(to top left, purple, rgb(94, 2, 94));
+                margin-bottom: 10px;
+                border: 2px solid white;
+                border-radius: 20px;
+            }
+            #fs1 label {
+                display: block;
+                font-family: 'Ubuntu', cursive;
+                color: white;
+                transition: 1s;
+            }
+            #fs1 legend {
+                font-family: fantasy;
+                color: white;
+                font-size: 24px;
+            }
+            #fs1 input {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 20px;
+                padding: 10px;
+                display: block;
+                position: relative;
+                left: 5%;
+            }
+            #fs1 input:hover {
+                border: 2px outset white;
+            }
+            #strongRut {
+                color: red;
+            }
+            #fs2 {
+                color: white;
+                font-family: 'Ubuntu', cursive;
+            }
+            #fs2 legend {
+                font-family: fantasy;
+                color: white;
+                font-size: 24px;
+                text-align: right;
+            }
+            #fs2 h2 {
+                text-align: center;
+            }
+            #fs2 label {
+                display: block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            footer img {
+                height: 50px;
+                width: auto;
+            }
+            #divname {
+                color: white;
+                font-size: 24px;
+                font-family: 'Ubuntu';
+                position: relative;
+                left: 50px;
+            }
+            #lpa {
+                border-radius: 50%;
+            }
+            #divlpa {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>PRE-CENSO JUVENIL</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goHome"><p>DATOS</p></a></li>
+                <li><a href="goForm"><p>FORMULARIO</p></a></li>
+            </ul>
+        </nav>
+        <main>
+            <form>
+                <fieldset id="fs1">
+                    <legend>Datos del usuario</legend>
+                    <label for="inputName">
+                        Nombre: <input id="inputName" type="text" name="inputName" required placeholder="Nombre...">
+                    </label>
+                    <label for="inputLastname">
+                        Apellido: <input id="inputLastname" type="text" name="inputLastname" required placeholder="Apellido...">
+                    </label>
+                    <label for="inputRut">
+                        RUT: <strong id="strongRut">Sin puntos ni guión. </strong><input type="number" required name="inputRut" min="1000000" max="99999999" placeholder="12345678">
+                    </label>
+                    <label for="inputEmail">
+                        Email: <input id="inputEmail" type="email" name="inputEmail" required placeholder="correolectronico@dominio.com">
+                    </label>
+                    <label for="inputDate">
+                        Fecha de nacimiento: <input name="inputDate" required type="date">
+                    </label>
+                    <label for="inputDirection">
+                        Dirección: <input type="text" name="inputDirection" required placeholder="Av. Santa María 1234.">
+                    </label>
+                    <label for="inputState">
+                        Comuna: <input type="text" name="inputState" required placeholder="Comuna...">
+                    </label>
+                </fieldset>
+                <fieldset id="fs2">
+                    <legend>Formulario PRE-CENSO</legend>
+                    <!-- pregunta1 -->
+                    <h2>¿Cuántas veces al día realizas algún deporte?</h2>
+                    <label for="radioSport0">
+                        <input type="radio" id="radioSport0" name="radioSport" value="0" checked> Nunca.
+                    </label>
+                    <label for="radioSport1">
+                        <input type="radio" id="radioSport1" name="radioSport" value="1"> Una vez por semana.
+                    </label>
+                    <label for="radioSport2">
+                        <input type="radio" id="radioSport2" name="radioSport" value="2"> Tres veces por semana.
+                    </label>
+                    <label for="radioSport-1">
+                        <input type="radio" id="radioSport-1" name="radioSport" value="-1"> Cuatro veces o más.
+                    </label>
+                    <h2>¿Qué tipo de deportes realizas?</h2>
+                    <label for="checkboxSport1">
+                        <input type="checkbox" id="checkboxSport1" name="checkboxSport1" value="futbol"> Fútbol.
+                    </label>
+                    <label for="checkboxSport2">
+                        <input type="checkbox" id="checkboxSport2" name="checkboxSport2" value="voleibol">  Voleibol.
+                    </label>
+                    <label for="checkboxSport3">
+                        <input type="checkbox" id="checkboxSport3" name="checkboxSport3" value="patinaje"> Patinaje.
+                    </label>
+                    <label for="checkboxSport4">
+                        <input type="checkbox" id="checkboxSport4" name="checkboxSport4" value="balonmano"> Balonmano.
+                    </label>
+                    <label for="checkboxSport5">
+                        <input type="checkbox" id="checkboxSport5" name="checkboxSport5" value="atletismo"> Atletismo.
+                    </label>
+                    <label for="checkboxSport6">
+                        <input type="checkbox" id="checkboxSport6" name="checkboxSport6" value="pesas"> Pesas.
+                    </label>
+                    <label for="checkboxSport7">
+                        <input type="checkbox" id="checkboxSport7" name="checkboxSport7" value="basquetbol"> Básquetbol.
+                    </label>
+                    <label for="checkboxSport8">
+                        <input type="checkbox" id="checkboxSport8" name="checkboxSport8" value="boxeo"> Boxeo.
+                    </label>
+                    <label for="checkboxSport0">
+                        <input type="checkbox" id="checkboxSport0" name="checkboxSport0" value="none"> No realizo ningún deporte.
+                    </label>
+                    <!--pregunta2-->
+                    <h2>¿Cuántas veces al día estudias?</h2>
+                    <label for="radioStudy0">
+                        <input type="radio" id="radioStudy0" name="radioStudy0" value="0" checked> Nunca.
+                    </label>
+                    <label for="radioStudy1">
+                        <input type="radio" id="radioStudy1" name="radioStudy0" value="1"> Una vez por semana.
+                    </label>
+                    <label for="radioStudy2">
+                        <input type="radio" id="radioStudy2" name="radioStudy0" value="2"> Tres veces por semana.
+                    </label>
+                    <label for="radioStudy-1">
+                        <input type="radio" id="radioStudy-1" name="radioStudy0" value="-1"> Cuatro veces o más.
+                    </label>
+                    <h2>¿Qué contenidos te gusta estudiar?</h2>
+                    <label for="checkboxStudy1">
+                        <input type="checkbox" id="checkboxStudy1" name="checkboxStudy1" value="matematicas"> Matemáticas.
+                    </label>
+                    <label for="checkboxStudy2">
+                        <input type="checkbox" id="checkboxStudy2" name="checkboxStudy2" value="fisica"> Física.
+                    </label>
+                    <label for="checkboxStudy3">
+                        <input type="checkbox" id="checkboxStudy3" name="checkboxStudy3" value="biologia"> Biología.
+                    </label>
+                    <label for="checkboxStudy4">
+                        <input type="checkbox" id="checkboxStudy4" name="checkboxStudy4" value="quimica"> Química.
+                    </label>
+                    <label for="checkboxStudy5">
+                        <input type="checkbox" id="checkboxStudy5" name="checkboxStudy5" value="ingles"> Inglés.
+                    </label>
+                    <label for="checkboxStudy6">
+                        <input type="checkbox" id="checkboxStudy6" name="checkboxStudy6" value="programacion"> Programación.
+                    </label>
+                    <label for="checkboxStudy7">
+                        <input type="checkbox" id="checkboxStudy7" name="checkboxStudy7" value="ciudadana"> Formación ciudadana.
+                    </label>
+                    <label for="checkboxStudy8">
+                        <input type="checkbox" id="checkboxStudy8" name="checkboxStudy8" value="lenguaje"> Lenguaje y comunicación.
+                    </label>
+                    <label for="checkboxStudy0">
+                        <input type="checkbox" id="checkboxStudy0" name="checkboxStudy0" value="none"> No estudio ninguna.
+                    </label>
+                    <!--pregunta3-->
+                    <h2>¿Cuántas veces sales con tus amig@s?</h2>
+                    <label for="radioFriends0">
+                        <input type="radio" id="radioFriends0" name="radioFriends" value="0"> Nunca.
+                    </label>
+                    <label for="radioFriends1">
+                        <input type="radio" id="radioFriends1" name="radioFriends" value="1"> Pocas veces.
+                    </label>
+                    <label for="radioFriends2">
+                        <input type="radio" id="radioFriends2" name="radioFriends" value="2"> Muchas veces.
+                    </label>
+                    <label for="radioFriends3">
+                        <input type="radio" id="radioFriends3" name="radioFriends" value="3"> Siempre.
+                    </label>
+                    <!--pregunta4-->
+                    <h2>¿Qué enseñanza estás cursando?</h2>
+                    <label for="radioEns1">
+                        <input type="radio" id="radioEns1" name="radioEns" value="1"> Enseñanza básica.
+                    </label>
+                    <label for="radioEns2">
+                        <input type="radio" id="radioEns2" name="radioEns" value="2"> Enseñanza Media.
+                    </label>
+                    <label for="radioEns3">
+                        <input type="radio" id="radioEns3" name="radioEns" value="3"> Enseñanza Superior.
+                    </label>
+                    <label for="radioEns4">
+                        <input type="radio" id="radioEns4" name="radioEns" value="4"> Egresado.
+                    </label>
+                    <!--pregunta5-->
+                    <h2>Si entrarás a la enseñanza superior, ¿Qué rama escogerias?</h2>
+                    <label for="radioSup1">
+                        <input type="radio" id="radioSup1" name="radioSup" value="1"> Ingeniería.
+                    </label>
+                    <label for="radioSup2">
+                        <input type="radio" id="radioSup2" name="radioSup" value="2"> Ciencias.
+                    </label>
+                    <label for="radioSup3">
+                        <input type="radio" id="radioSup3" name="radioSup" value="3"> Humanista.
+                    </label>
+                    <label for="radioSup4">
+                        <input type="radio" id="radioSup4" name="radioSup" value="4"> No tengo pensado ingresar.
+                    </label>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div id="divlpa">
+                <div><a href="https://www.duoc.cl/admision/?utm_source=GoogleSearch&utm_medium=Display&utm_campaign=HMSCL_Duoc_NSB_EDU-AO_SEM-BRD&utm_content=DTXT-1X1-SEM_ADM_2022_2023_BRAND&gclid=EAIaIQobChMI1bWI5veF-gIVsehcCh23ogoeEAAYASAAEgIlkvD_BwE"><img id="duoc" src="duoclog.png"></a></div>
+                <div><a href="https://liceoandes.duoc.cl/"><img id="lpa" src="lpalog.jfif"></a></div>
+            </div>
+            <div id="divname"><p>Miguel Chamorro 4°C</p></div>
+        </footer>
+    </body>
+</html>

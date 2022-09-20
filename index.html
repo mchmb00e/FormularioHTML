@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pre-censo JUVENIL</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+            body {
+                margin: 0;
+            }
+            header h1 {
+                font-family: 'Oswald', fantasy;
+                font-size: 76px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>PRE-CENSO JUVENIL</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="goForm"><p>DATOS</p></a></li>
+                <li><a href="goForm"><p>FORMULARIO</p></a></li>
+            </ul>
+        </nav>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Datos del usuario</legend>
+                    <label for="inputName">
+                        Nombre: <input id="inputName" type="text" name="inputName" placeholder="Nombre...">
+                    </label>
+                    <label for="inputLastname">
+                        Apellido: <input id="inputLastname" type="text" name="inputLastname" placeholder="Apellido...">
+                    </label>
+                    <label for="inputRut">
+                        RUT: <strong>Sin puntos ni guión.</strong><input type="number" name="inputRut" min="1000000" max="99999999" placeholder="12345678">
+                    </label>
+                    <label for="inputEmail">
+                        Email: <input id="inputEmail" type="email" name="inputEmail" placeholder="correolectronico@dominio.com">
+                    </label>
+                    <label for="inputDate">
+                        Fecha de nacimiento: <input name="inputDate" type="date">
+                    </label>
+                    <label for="inputDirection">
+                        Dirección: <input type="text" name="inputDirection" placeholder="Av. Santa María 1234.">
+                    </label>
+                    <label for="inputState">
+                        Comuna: <input type="text" name="inputState" placeholder="Comuna...">
+                    </label>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
